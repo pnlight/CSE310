@@ -8,7 +8,8 @@ Testing my hello world skills. Yup still works. Git-VScode integration done.
 # Development Environment
 
 * I used VSCode and Python to create this page.
-* Git/Github MD
+* Git/Github 
+* readme.md from the cheat sheet 
 
 # Useful Websites
 
