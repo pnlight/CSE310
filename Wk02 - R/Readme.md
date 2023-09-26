@@ -4,7 +4,7 @@ In this module I decided to learn R and use new libraries.
 
 [Software Demo Video](http://youtube.link.goes.here)
 
-[Shiny Link](https://shiny.byui.edu/content/2fc96afb-88bb-406c-ae82-2e927076690f/Stonks.html)
+[Shiny Link](https://shiny.byui.edu/content/6d615bfc-718f-4235-8003-a25130e28983/Stonks.html)
 
 # Development Environment
 

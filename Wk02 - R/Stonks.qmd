@@ -25,7 +25,7 @@ library(forecast)
 ```
 I wanted to predict what our retirement would look like with the stocks we've picked when my wife and I got married. These are the top 5 stocks that I've handpicked when we started investing. 
 
-However, like most stock analysis predictions, using statistics and math to produce models is not 100% reliable. Complexity of Financial Markets and Randomness and Uncertainty will always play a role in the voilatility to the market. Thus, this is not a financial advice! 
+However, like most stock analysis predictions, using statistics and math to produce models is not 100% reliable. Complexity of Financial Markets and Randomness and Uncertainty will always play a role in the volatility to the market. Thus, this is not a financial advice! 
 ```{r}
 
 # Pull 5 stock picks my wife and I have.

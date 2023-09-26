@@ -1,15 +1,12 @@
 name: stonks
-title:
+title: Stonks
 username: pnlight
 account: pnlight
 server: shiny.byui.edu
 hostUrl: https://shiny.byui.edu/__api__
 appId: 2293
-bundleId: 4618
+bundleId: 4620
 url: https://shiny.byui.edu/content/6d615bfc-718f-4235-8003-a25130e28983/
 version: 1
-quarto_version: 1.3.433
-quarto_engines: knitr
 asMultiple: FALSE
-asStatic: FALSE
-additionalFiles: Readme.md|Stonks.html|Stonks.md
+asStatic: TRUE
