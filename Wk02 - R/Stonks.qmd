@@ -23,13 +23,19 @@ library(timetk)
 library(rmarkdown)
 library(forecast)
 ```
+I wanted to predict what our retirement would look like with the stocks we've picked when my wife and I got married. These are the top 5 stocks that I've handpicked when we started investing. 
 
+However, like most stock analysis predictions, using statistics and math to produce models is not 100% reliable. Complexity of Financial Markets and Randomness and Uncertainty will always play a role in the voilatility to the market. Thus, this is not a financial advice! 
 ```{r}
+
+# Pull 5 stock picks my wife and I have.
+
 df <- tq_get(c("NVDA", "VTI", "AAPL", "SCHD", "IBM"),
              get = "stock.prices",
              from = "2017-12-01",
-             to = "2023-09-26")
+             to = "2023-09-26") # Date can be modified to pick the current date end_date for this demo I want to select the date I finished this project
 
+# Data Wrangling 
 df2 <- df %>% pivot_wider(names_from = symbol, values_from = adjusted, id_cols = date)
 
 xts <- df2 %>%
@@ -37,6 +43,9 @@ xts <- df2 %>%
 
 stocks <- dygraph(xts, main = "Tech Stocks", xlab = "Years", ylab = "Stock Prices") %>%
   dyRangeSelector(dateWindow = c("2017-12-01", "2023-09-26"))
+
+# Display the dygraph
+stocks
 
 # Forecast for the next year
 forecast_period <- 7305  #20 years
@@ -55,7 +64,4 @@ create_forecast <- function(symbol) {
 for (symbol in colnames(xts)) {
   create_forecast(symbol)
 }
-
-# Display the dygraph
-stocks
 ```
