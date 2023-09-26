@@ -10,8 +10,6 @@ I decided to predict stocks that my wife and I have bought when we got married. 
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
 - [Pandoc for R](https://cran.r-project.org/web/packages/pandoc/index.html)
 - [Tidyverse](https://www.tidyverse.org/packages/)
 - [Forecast](https://cran.r-project.org/web/packages/forecast/index.html)
