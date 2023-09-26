@@ -1,0 +1,63 @@
+---
+title: "Stocks"
+format:
+  html:
+    code-link: true
+    code-fold: true
+editor: visual
+execute:
+  keep-md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+
+# Load the required libraries
+library(ggplot2)
+library(tidyverse)
+library(tidyquant)
+library(dygraphs)
+library(ggforce)
+library(lubridate)
+library(timetk)
+library(rmarkdown)
+library(forecast)
+```
+
+```{r}
+df <- tq_get(c("NVDA", "VTI", "AAPL", "SCHD", "IBM"),
+             get = "stock.prices",
+             from = "2017-12-01",
+             to = "2023-09-26")
+
+df2 <- df %>% pivot_wider(names_from = symbol, values_from = adjusted, id_cols = date)
+
+xts <- df2 %>%
+  tk_xts(date = date)
+
+stocks <- dygraph(xts, main = "Tech Stocks", xlab = "Years", ylab = "Stock Prices") %>%
+  dyRangeSelector(dateWindow = c("2017-12-01", "2023-09-26"))
+
+# Forecast for the next year
+forecast_period <- 7305  #20 years
+
+# Function to create a forecast for a given symbol
+create_forecast <- function(symbol) {
+  symbol_data <- xts[, symbol]
+  symbol_ts <- ts(symbol_data, frequency = 7305)
+  
+  # Fit a forecast model (you can use a different method here)
+  forecast_model <- forecast(auto.arima(symbol_ts))
+  
+  # Plot the forecast
+  plot(forecast_model, main = paste("Forecast for", symbol), xlab = "Years", ylab = "Stock Prices")
+}
+
+# Create and display forecasts for each symbol
+for (symbol in colnames(xts)) {
+  create_forecast(symbol)
+}
+
+# Display the dygraph
+stocks
+```
