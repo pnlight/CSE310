@@ -41,19 +41,17 @@ stocks <- dygraph(xts, main = "Tech Stocks", xlab = "Years", ylab = "Stock Price
 # Forecast for the next year
 forecast_period <- 7305  #20 years
 
-# Function to create a forecast for a given symbol
+# Function to create a forecast for a stock
 create_forecast <- function(symbol) {
   symbol_data <- xts[, symbol]
   symbol_ts <- ts(symbol_data, frequency = 7305)
   
-  # Fit a forecast model (you can use a different method here)
   forecast_model <- forecast(auto.arima(symbol_ts))
   
-  # Plot the forecast
   plot(forecast_model, main = paste("Forecast for", symbol), xlab = "Years", ylab = "Stock Prices")
 }
 
-# Create and display forecasts for each symbol
+# Create and display forecasts for each stock
 for (symbol in colnames(xts)) {
   create_forecast(symbol)
 }
