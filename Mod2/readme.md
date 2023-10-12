@@ -8,8 +8,6 @@ As a Filipino soon-to-graduate student, I've chosen the Diversity Index Project 
 
 [Shiny Link](https://shiny.byui.edu/content/a20e78b1-330a-4115-8062-3c12e8a5f222)
 
-I decided to predict stocks that my wife and I have bought when we got married. I tried to track them using tidyquaint and tidyverse. I also used dygraphs to produce beautiful sliding graphs. Learning how to use the forecast library was fun. Not only did it help me visualize what my stock picks look like in the future, it also helped me troubleshoot my VScode environment.
-
 # Useful Websites
 
 - [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html)
@@ -28,3 +26,4 @@ I decided to predict stocks that my wife and I have bought when we got married. 
 
 - Link the CSV directly from the Census website.
 - Move Hawaii, Alaska, and Puerto Rico closer to the main map view.
+- Migrate from USAboundaries package which is being retired this October.
