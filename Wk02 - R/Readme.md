@@ -2,7 +2,7 @@
 
 In this module I decided to learn R and use new libraries.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.loom.com/share/5c09bee661db463c9bfef84d1213bedd?sid=0e0b8f45-1ed5-4576-86c0-cda310afaf1b)
 
 [Shiny Link](https://shiny.byui.edu/content/6d615bfc-718f-4235-8003-a25130e28983/Stonks.html)
 
