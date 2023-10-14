@@ -4,7 +4,7 @@ This week I decided to continue using R to make GIS maps.
 
 As a Filipino soon-to-graduate student, I've chosen the Diversity Index Project because I'm planning to move to a state different from Idaho in search of greater diversity. This project will help me find more variety in both culture and nature. With this GIS project, I'm equipping myself with the knowledge needed to find the best place for my family to settle.
 
-[Software Demo Video](https://www.loom.com/share/5c09bee661db463c9bfef84d1213bedd?sid=0e0b8f45-1ed5-4576-86c0-cda310afaf1b)
+[Software Demo Video](https://www.loom.com/share/1110aaf47da64e36b4df4099a41d9a7b?sid=56249653-e1d8-4308-bcb1-498848459ec7)
 
 [Shiny Link](https://shiny.byui.edu/content/a20e78b1-330a-4115-8062-3c12e8a5f222)
 
