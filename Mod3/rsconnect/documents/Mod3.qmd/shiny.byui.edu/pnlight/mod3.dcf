@@ -1,0 +1,14 @@
+name: mod3
+title: Mod3
+username: pnlight
+account: pnlight
+server: shiny.byui.edu
+hostUrl: https://shiny.byui.edu/__api__
+appId: 2300
+bundleId: 4625
+url: https://shiny.byui.edu/content/42c56c56-505a-4437-bd8b-4365031b605d/
+version: 1
+quarto_version: 1.3.433
+quarto_engines: knitr
+asMultiple: FALSE
+asStatic: FALSE

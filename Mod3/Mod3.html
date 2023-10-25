@@ -83,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 </header><p>In this module, I wanted to look at the future of the position of the SF in the NBA. The season has just started and I’m really excited this year.</p>
-<p>My intention for this Module originally was just to prove how the league has gone to a more 3-point-centric game than the classic pound it inside. However, when I was looking at the data, I coulnd’t help but to notice the decline of the SF position in the NBA.</p>
+<p>My intention for this Module originally was just to prove how the league has gone to a more 3-point-centric game than the classic pound it inside. However, when I was looking at the data, I couldn’t help but to notice the decline of the SF position in the NBA.</p>
 <p>Here’s my attempt wrangle and visualize just that.</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">'data.csv'</span><span class="op">)</span></span>
@@ -131,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu">summarise</span><span class="op">(</span>ptsper <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">PTS</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, mp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">MP</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, ppm <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">ptsper</span><span class="op">/</span><span class="va">mp</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>As I mentioned earlier, my original intention was just to show how the league has focused more on three pointers. In this chart, we definitely see an uptick in three points attemps by all positions in the NBA.</p>
+<p>As I mentioned earlier, my original intention was just to show how the league has focused more on three pointers. In this chart, we definitely see an uptick in three points attempts by all positions in the NBA.</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">threes</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Season</span>, y <span class="op">=</span> <span class="va">Avg_3PA</span>, color <span class="op">=</span> <span class="va">Combined_Pos</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_line</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span></span>
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Mod3_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1344"></p>
 </div>
 </div>
-<p>Lastly I looked into Points per minute while on the floor and there’s just tons of evidence that other positions have overtaken the SF when it comes to scoring and efficiency.</p>
+<p>I also looked into Points per minute while on the floor and there’s just tons of evidence that other positions have overtaken the SF when it comes to scoring and efficiency.</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">ptspermin</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Season</span>, y <span class="op">=</span> <span class="va">ppm</span> , color <span class="op">=</span> <span class="va">Combined_Pos</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_line</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span></span>
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Mod3_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="1344"></p>
 </div>
 </div>
-<p>Lastly, I wanted to look how the MVPs of each position stack up to each other. On average, for you to be an MVP in the SF position you have to be like three players. You need to play like Lebron James, Kevin Durant, or Carmelo Anthony. You have to be at the the 98th percentile of the SF to become an MVP. Talk about high standards.</p>
+<p>Lastly, I wanted to look how the MVP’s of each position stack up to each other. On average, for you to be an MVP in the SF position you have to be like three players. You need to play like Lebron James, Kevin Durant, or Carmelo Anthony. You have to be at the the 98th percentile of the SF to become an MVP. Talk about high standards.</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sfstats</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">Pos</span> <span class="op">==</span> <span class="st">'SF'</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
