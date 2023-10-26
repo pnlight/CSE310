@@ -8,7 +8,7 @@ Here's my attempt wrangle and visualize just that.
 
 [Software Demo Video](https://www.loom.com/share/1110aaf47da64e36b4df4099a41d9a7b?sid=56249653-e1d8-4308-bcb1-498848459ec7)
 
-[Website]()
+[Website](https://htmlpreview.github.io/?https://github.com/pnlight/CSE310/blob/main/Mod3/index.html)
 
 # Useful Websites
 
