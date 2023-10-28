@@ -18,7 +18,7 @@ library(downloader)
 library(dplyr)
 ```
 
-In this module, I wanted to look at the future of the position of the SF in the NBA. The season has just started and I'm really excited this year.
+In this module, I wanted to look at the future of the SF position in the NBA. The season has just started and I'm really excited this year.
 
 My intention for this Module originally was just to prove how the league has gone to a more 3-point-centric game than the classic pound it inside. However, when I was looking at the data, I couldn't help but to notice the decline of the SF position in the NBA.
 
