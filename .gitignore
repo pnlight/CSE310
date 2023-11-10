@@ -6,3 +6,16 @@
 =======
 get-pip.py
 >>>>>>> 392a124a8008b04ca4a51b314213171afc1c6531
+Mod4/openssl-san.cnf
+Mod4/openssl.txt
+Mod4/PostgreSQL.sd
+Mod4/root_server.cer
+Mod4/root_server.key
+Mod4/root_server.srl
+Mod4/server.cer
+Mod4/server.csr
+Mod4/server.key
+Mod4/server.p12
+Mod4/certificateScript.ps1
+Mod4/localhost.pfx
+Mod4/Map.sd
