@@ -71,3 +71,11 @@ VALUES (ST_GeomFromText('POINT(-71.060316 48.432044)', 3857), 'Example', 1);
 
 -- But we can do joins adds and remove in PGSQL too for example:
 
+-- I have two feature class exported to my Map sde.buildings and sde.phones. I want to join both of them and get the comprehensive data from the buildings over to the phones so I can do spatial analysis on my points feature class.
+
+CREATE TABLE joined AS
+SELECT building.*, survey.*
+FROM building
+INNER JOIN survey ON building.buildingid = survey.building;
+
+-- I can then run this to create new layer and run geoprocessing tools.
