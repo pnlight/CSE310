@@ -21,6 +21,7 @@ GRANT USAGE ON SCHEMA sde TO viewers;
 -- DROP SCHEMA IF EXISTS sde ;
 
 -- this creates my schema and grants all the authorization. I already have an schema as sde so this will do nothing.
+
 CREATE SCHEMA IF NOT EXISTS sde
     AUTHORIZATION sde;
 
@@ -30,11 +31,13 @@ GRANT ALL ON SCHEMA sde TO sde;
 
 -- I also have an sde schema already setup.
 
-CREATE DATABASE Test_mod4;
+CREATE DATABASE test_mod4;
 
-\c Test_mod4;
+-- make sure to connect to the test environment and run your PQSQL codes there. 
 
-CREATE EXTENSION IF NOT EXISTS postgis; -- make sure PostGIS is installed we need the spatial references for it to work on ArcGIS.
+CREATE EXTENSION IF NOT EXISTS postgis; 
+
+-- make sure PostGIS is installed we need the spatial references for it to work on ArcGIS.
 
 CREATE SCHEMA sde;
 
@@ -79,3 +82,4 @@ FROM building
 INNER JOIN survey ON building.buildingid = survey.building;
 
 -- I can then run this to create new layer and run geoprocessing tools.
+
