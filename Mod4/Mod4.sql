@@ -66,3 +66,8 @@ INSERT INTO sde.testpoints (geom, attribute1, attribute2)
 VALUES (ST_GeomFromText('POINT(-71.060316 48.432044)', 3857), 'Example', 1);
 
 -- Most of these commands are for testing purpose. We will create the layers directly in arcgis pro and we can do the wrangling in the back end.
+
+-- The adding and update of the attribute is better done in the front end which is ArcGIS. 
+
+-- But we can do joins adds and remove in PGSQL too for example:
+
