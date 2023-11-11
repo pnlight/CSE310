@@ -8,7 +8,8 @@ This is also what I would be doing when I graduate in five weeks. I just accepte
 
 This will be a multi-part project.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.loom.com/share/1647347f99994052b73575a7614b564a?sid=8d7126b2-59a4-4282-a906-2bcc839d4de5)
+[SQL Script](https://github.com/pnlight/CSE310/blob/main/Mod4/Mod4.sql)
 
 # Relational Database
 
