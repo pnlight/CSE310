@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geocoding Search</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="app.js"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <form id="form">
+    <label for="address">Enter address:</label>
+    <input type="text" id="address">
+    <button id="submit">Search</button>
+  </form>
+  <div id="result"></div>
+  <h3>Map Location</h3>
+  <div id="map"></div>
+  <script>
+    
+    var apiKey = config.API_KEY;
+   
+    var script = document.createElement('script');
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=initMap';
+    document.body.appendChild(script);
+  </script>
+</body> 
+</html>
