@@ -1,3 +1,3 @@
 var config = {
-    API_KEY: AIzaSyDcuPILDwMzFXCtXfahiJTapycjyqdy6jw
-  }
+  API_KEY: 'AIzaSyDcuPILDwMzFXCtXfahiJTapycjyqdy6jw'
+}
