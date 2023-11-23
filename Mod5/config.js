@@ -1,3 +1,4 @@
 var config = {
-  API_KEY: process.env.API_KEY
-};
+    API_KEY: ${{ secrets.API_KEY}}
+  }
+  
