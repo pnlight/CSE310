@@ -21,6 +21,7 @@ GRANT USAGE ON SCHEMA sde TO viewers;
 -- DROP SCHEMA IF EXISTS sde ;
 
 -- this creates my schema and grants all the authorization. I already have an schema as sde so this will do nothing.
+
 CREATE SCHEMA IF NOT EXISTS sde
     AUTHORIZATION sde;
 
@@ -30,11 +31,13 @@ GRANT ALL ON SCHEMA sde TO sde;
 
 -- I also have an sde schema already setup.
 
-CREATE DATABASE Test_mod4;
+CREATE DATABASE test_mod4;
 
-\c Test_mod4;
+-- make sure to connect to the test environment and run your PQSQL codes there. 
 
-CREATE EXTENSION IF NOT EXISTS postgis; -- make sure PostGIS is installed we need the spatial references for it to work on ArcGIS.
+CREATE EXTENSION IF NOT EXISTS postgis; 
+
+-- make sure PostGIS is installed we need the spatial references for it to work on ArcGIS.
 
 CREATE SCHEMA sde;
 
@@ -70,4 +73,13 @@ VALUES (ST_GeomFromText('POINT(-71.060316 48.432044)', 3857), 'Example', 1);
 -- The adding and update of the attribute is better done in the front end which is ArcGIS. 
 
 -- But we can do joins adds and remove in PGSQL too for example:
+
+-- I have two feature class exported to my Map sde.buildings and sde.phones. I want to join both of them and get the comprehensive data from the buildings over to the phones so I can do spatial analysis on my points feature class.
+
+CREATE TABLE joined AS
+SELECT building.*, survey.*
+FROM building
+INNER JOIN survey ON building.buildingid = survey.building;
+
+-- I can then run this to create new layer and run geoprocessing tools.
 
