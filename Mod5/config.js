@@ -1,4 +1,3 @@
 var config = {
-    API_KEY: ${{ secrets.API_KEY}}
+    API_KEY : 'AIzaSyDcuPILDwMzFXCtXfahiJTapycjyqdy6jw'
   }
-  
